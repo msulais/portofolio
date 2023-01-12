@@ -1,0 +1,117 @@
+.page {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.decorator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-left: 16px;
+}
+
+.decoratorLineTop {
+  min-width: 5px;
+  max-width: 5px;
+  min-height: 32px;
+  max-height: 32px;
+  background-color: #212121;
+  border-radius: 0 0 100px 100px;
+}
+
+.decoratorIcon {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+
+  > span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+  }
+}
+
+.decoratorLineBottom {
+  flex: 1;
+  min-width: 5px;
+  max-width: 5px;
+  background-color: #212121;
+  border-radius: 100px 100px 0 0;
+}
+
+.content {
+  margin: 52px 16px 52px 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > div {
+    width: 100%;
+    max-width: 1000px;
+
+    > h1 {
+      margin-left: 24px;
+    }
+  }
+}
+
+.aboutMe {
+  margin-top: 24px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.aboutMeImage {
+  display: block;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  max-width: 100%;
+  border-radius: 80px;
+  max-height: calc(100vh - 64px);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.aboutMeDescription {
+  flex: 1;
+
+  > p {
+    font-size: 13pt;
+  }
+}
+
+.mediaSocial {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border-top: 1px dashed;
+  padding-top: 16px;
+  gap: 16px;
+  display: flex;
+  > a {
+    display: block;
+
+    > img {
+      display: block;
+      width: 42px;
+      height: 42px;
+      transition-duration: .25s;
+
+      &:hover {
+        scale: 1.15;
+      }
+    }
+  }
+}
+
+@media (max-width: 715px) {
+  .aboutMeImage {
+    width: 100%;
+  }
+}
