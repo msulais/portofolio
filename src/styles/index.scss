@@ -1,0 +1,127 @@
+:root {
+    --color-primary               :  23, 109,  42;
+    --color-on-primary            : 255, 255, 255;
+    --color-primary-container     : 161, 246, 163;
+    --color-on-primary-container  :   0,  33,   6;
+    --color-secondary             :  82,  99,  80;
+    --color-on-secondary          : 255, 255, 255;
+    --color-secondary-container   : 213, 232, 208;
+    --color-on-secondary-container:  16,  31,  16;
+    --color-tertiary              :  57, 101, 107;
+    --color-on-tertiary           : 255, 255, 255;
+    --color-tertiary-container    : 188, 235, 242;
+    --color-on-tertiary-container :   0,  31,  35;
+    --color-error                 : 186,  26,  26;
+    --color-error-container       : 255, 218, 214;
+    --color-on-error              : 255, 255, 255;
+    --color-on-error-container    :  65,   0,   2;
+    --color-background            : 252, 253, 247;
+    --color-on-background         :  26,  28,  25;
+    --color-surface               : 252, 253, 247;
+    --color-on-surface            :  26,  28,  25;
+    --color-surface-variant       : 222, 229, 217;
+    --color-on-surface-variant    :  66,  73,  64;
+    --color-outline               : 114, 121, 111;
+    --color-inverse-on-surface    : 240, 241, 235;
+    --color-inverse-surface       :  47,  49,  45;
+    --color-inverse-primary       : 134, 217, 137;
+    --color-shadow                :   0,   0,   0;
+    --color-surface-tint          :  23, 109,  42;
+    --color-outline-variant       : 194, 201, 189;
+    --color-scrim                 :   0,   0,   0;
+    &.dark {
+        --color-primary               : 134, 217, 137;
+        --color-on-primary            :   0,  57,  15;
+        --color-primary-container     :   0,  83,  26;
+        --color-on-primary-container  : 161, 246, 163;
+        --color-secondary             : 185, 204, 180;
+        --color-on-secondary          :  36,  52,  36;
+        --color-secondary-container   :  58,  75,  57;
+        --color-on-secondary-container: 213, 232, 208;
+        --color-tertiary              : 161, 206, 213;
+        --color-on-tertiary           :   0,  54,  60;
+        --color-tertiary-container    :  31,  77,  83;
+        --color-on-tertiary-container : 188, 235, 242;
+        --color-error                 : 255, 180, 171;
+        --color-error-container       : 147,   0,  10;
+        --color-on-error              : 105,   0,   5;
+        --color-on-error-container    : 255, 218, 214;
+        --color-background            :  26,  28,  25;
+        --color-on-background         : 226, 227, 221;
+        --color-surface               :  26,  28,  25;
+        --color-on-surface            : 226, 227, 221;
+        --color-surface-variant       :  66,  73,  64;
+        --color-on-surface-variant    : 194, 201, 189;
+        --color-outline               : 140, 147, 136;
+        --color-inverse-on-surface    :  26,  28,  25;
+        --color-inverse-surface       : 226, 227, 221;
+        --color-inverse-primary       :  23, 109,  42;
+        --color-shadow                :   0,   0,   0;
+        --color-surface-tint          : 134, 217, 137;
+        --color-outline-variant       :  66,  73,  64;
+        --color-scrim                 :   0,   0,   0;
+        color-scheme: dark;
+        * {
+            color-scheme: dark;
+        }
+    }
+}
+
+* {
+    background-color: transparent;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    &:not(pre code span) {
+        color: rgb(var(--color-on-background));
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+code, code * {
+    font-family: 'DM Mono', monospace;
+}
+
+html {
+    background-color: rgb(var(--color-background));
+}
+
+input, button {
+    background-color: transparent;
+    border: 0px none;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+main {
+    margin-top: 60px;
+    min-height: calc(100vh - 60px);
+}
+
+button, button *, summary, summary *, .icon {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+input, textarea, button, select, a, summary, .icon {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+    width: 1440px;
+    max-width: 100%;
+}
