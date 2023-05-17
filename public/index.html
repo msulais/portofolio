@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -22,6 +22,8 @@
             import Cookie from "/scripts/js.cookie.mjs"
             if (Cookie.get("theme") === "dark")
                 document.querySelector(":root").classList.add("dark")
+            if (Cookie.get('lang') === 'id')
+                document.querySelector(":root").setAttribute('lang', 'id')
         </script>
     </head>
     <body>
